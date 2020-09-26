@@ -30,7 +30,7 @@ while True:
     if run_count + 1 == (run_count := table.getNumber("Run Count", 0)):
         with open('runs.csv', 'w', newline='') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            spamwriter.writerow(run_count,
+            spamwriter.writerow([run_count,
             table.getNumber("Left Power", 0),
             table.getNumber("Right Power", 0),
             table.getNumber("L Current", 0),
@@ -38,6 +38,6 @@ while True:
             table.getNumber("L Voltage", 0),
             table.getNumber("R Voltage", 0),
             table.getNumber("L Speed", 0),
-            table.getNumber("R Speed", 0))
+            table.getNumber("R Speed", 0)])
 
 # Itay was here
