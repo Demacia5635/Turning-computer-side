@@ -39,5 +39,3 @@ while True:
             table.getNumber("R Voltage", 0),
             table.getNumber("L Speed", 0),
             table.getNumber("R Speed", 0)])
-
-# Itay was here
