@@ -25,10 +25,10 @@ table = NetworkTables.getTable('SmartDashboard')
 
 
 run_count = 0
+with open('runs.csv', 'w', newline='') as csvfile:
 
-while True:
-    if run_count != (run_count := table.getNumber("Run Count", 0)):
-        with open('runs.csv', 'w', newline='') as csvfile:
+    while True:
+        if run_count != (run_count := table.getNumber("Run Count", 0)):
             spamwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             spamwriter.writerow([run_count,
             table.getNumber("Left Power", 0),
